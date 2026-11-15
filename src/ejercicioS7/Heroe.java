@@ -1,0 +1,89 @@
+package ejercicioS7;
+
+
+
+public class Heroe implements Comparable<Heroe> {
+
+    private int id;
+    private String nombre;
+    private String superpoder;
+    private String mision;
+    private int dificultad;
+    private double pagoMensual;
+
+    public Heroe(int id, String nombre, String superpoder, String mision,
+                 int dificultad, double pagoMensual) {
+        this.id = id;
+        this.nombre = nombre;
+        this.superpoder = superpoder;
+        this.mision = mision;
+        this.dificultad = dificultad;
+        this.pagoMensual = pagoMensual;
+    }
+
+
+    public int getId() {
+        return id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getSuperpoder() {
+        return superpoder;
+    }
+
+    public String getMision() {
+        return mision;
+    }
+
+    public int getDificultad() {
+        return dificultad;
+    }
+
+    public double getPagoMensual() {
+        return pagoMensual;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setSuperpoder(String superpoder) {
+        this.superpoder = superpoder;
+    }
+
+    public void setMision(String mision) {
+        this.mision = mision;
+    }
+
+    public void setDificultad(int dificultad) {
+        this.dificultad = dificultad;
+    }
+
+    public void setPagoMensual(double pagoMensual) {
+        this.pagoMensual = pagoMensual;
+    }
+
+    @Override
+    public int compareTo(Heroe otro) {
+        return Integer.compare(this.id, otro.id);
+    }
+
+    @Override
+    public String toString() {
+        return "Heroe: " +
+                "Id " + id +
+                "\nNombre: " + nombre  +
+                "\nSuperpoder: " + superpoder +
+                "\nMision: " + mision+
+                "\nDificultad: " + dificultad +
+                "\nPago Mensual: " + pagoMensual ;
+    }
+}
+
